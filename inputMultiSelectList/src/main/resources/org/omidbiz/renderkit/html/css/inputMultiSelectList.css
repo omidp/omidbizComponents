@@ -5,7 +5,9 @@
 .input-mutlti-select-list-menu {
 	min-width: 151px;
 }
-
+.table-wrapper-scrolling{
+	overflow: auto;
+}
 .input-mutli-select-list .toggle-button {
 	background-color: #ddd;
 	height: 23px;

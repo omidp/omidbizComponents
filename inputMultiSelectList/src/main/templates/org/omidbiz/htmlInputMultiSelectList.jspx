@@ -20,7 +20,7 @@
 		var id = "#"+"#{this:getJQueryId(context, component)}";
 		jQuery(id).qtip({prerender: true,show:{target:jQuery(id+"Button"),event:"click"},hide:{event:"unfocus"},
 		position:{my:"top center",at:"bottom center",target:jQuery(id)},content:{text:"#{this:getTableListStr(context, component)}"} ,style:{classes: 'qtip qtip-light qtip-shadow input-mutlti-select-list-menu'}});
-
+		
 		var v = jQuery(id);
 // fix pattern of text box on blur
 		v.on("blur",function(){

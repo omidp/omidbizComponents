@@ -63,5 +63,13 @@
 			</description>
 			<defaultvalue>","</defaultvalue>
 		</property>
+		<property>
+			<name>scrollLimit</name>
+			<classname>java.lang.String</classname>
+			<description>
+				number of list item visible without scroll
+			</description>
+			<defaultvalue>"5"</defaultvalue>
+		</property>
 	</component>
 </components>
