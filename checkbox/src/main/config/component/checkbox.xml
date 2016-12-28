@@ -92,6 +92,13 @@
 				true for single switch and false for double switch
 			</description>			
 			<defaultvalue>false</defaultvalue>			
-		</property>		
+		</property>	
+		<property>
+			<name>inputValueType</name>
+			<classname>java.lang.String</classname>
+			<description>
+				this attribute help convert input value it can be boolean
+			</description>			
+		</property>				
 	</component>
 </components>

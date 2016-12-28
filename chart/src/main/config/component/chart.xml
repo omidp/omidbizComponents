@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//AJAX4JSF//CDK Generator config/EN"  "http://labs.jboss.com/jbossrichfaces/component-config.dtd">
+
+<components>
+	<component>
+		<name>org.omidbiz.Chart</name>
+		<family>org.omidbiz.Chart</family>
+		<classname>org.omidbiz.component.html.HtmlChart</classname>
+		<superclass>org.omidbiz.component.UIChart</superclass>
+		<description>
+			<![CDATA[
+    ]]>
+		</description>
+		<renderer generate="true" override="true">
+			<name>org.omidbiz.ChartRenderer</name>
+			<template>org/omidbiz/htmlChart.jspx</template>
+		</renderer>
+		<tag>
+			<name>chart</name>
+			<classname>org.omidbiz.taglib.ChartTag</classname>
+			<superclass>
+				org.ajax4jsf.webapp.taglib.HtmlComponentTagBase
+			</superclass>
+		</tag>
+		<property>
+			<name>forceId</name>
+			<classname>java.lang.String</classname>
+			<description>
+				if you want to assign specific id to chart
+			</description>
+		</property>		
+		<property>
+			<name>type</name>
+			<classname>java.lang.String</classname>
+			<defaultvalue>"bar"</defaultvalue>
+			<description>
+				type of chart; it can be, line,bar,pie,bubble (for this chart you must add additonal [] to your data sets)
+			</description>
+		</property>
+		<property>
+			<name>value</name>
+			<classname>java.lang.Object</classname>
+			<description>
+				must be a json array list 
+			</description>
+			<required>true</required>
+		</property>	
+        <property>
+			<name>series</name>
+			<classname>java.lang.Object</classname>
+			<description>
+				the name of data sets
+			</description>
+			<required>true</required>
+		</property>		
+        <property>
+			<name>ticks</name>
+			<classname>java.lang.Object</classname>
+			<description>
+				ticks for x axis 
+			</description>
+			<required>true</required>
+		</property>	
+        <property>
+			<name>renderOption</name>
+			<classname>java.lang.String</classname>
+			<description>
+				regular options that you can find at jqplot web site
+			</description>
+			<defaultvalue>""</defaultvalue>
+		</property>
+        <property>
+			<name>tickAngle</name>
+			<classname>java.lang.String</classname>
+			<description>
+				the tick angle 
+			</description>
+			<defaultvalue>"0.0"</defaultvalue>
+		</property>				
+        <property>
+			<name>height</name>
+			<classname>java.lang.String</classname>
+			<description>
+				height for canvas chart
+			</description>
+			<defaultvalue>"300"</defaultvalue>
+		</property>
+        <property>
+			<name>width</name>
+			<classname>java.lang.String</classname>
+			<description>
+				width for canvas chart 
+			</description>
+			<defaultvalue>""</defaultvalue>
+		</property>
+        <property>
+			<name>xAxisLable</name>
+			<classname>java.lang.String</classname>
+			<description>
+				label for x axis ticks
+			</description>
+			<defaultvalue>"300"</defaultvalue>
+		</property>	
+        <property>
+			<name>yAxisLable</name>
+			<classname>java.lang.String</classname>
+			<description>
+				label for y axis ticks
+			</description>
+			<defaultvalue>""</defaultvalue>
+		</property>			
+        <property>
+			<name>styleFrame</name>
+			<classname>java.lang.String</classname>
+			<description>
+				styles for chart frame
+			</description>
+			<defaultvalue>""</defaultvalue>
+		</property>		
+        <property>
+			<name>title</name>
+			<classname>java.lang.String</classname>
+			<description>
+				title of chart it can be bar, line, pie 
+			</description>
+			<defaultvalue>"sample chart"</defaultvalue>
+		</property>		
+	</component>
+</components>

@@ -35,6 +35,7 @@
     height: 107px !important;
     width: 242px;
     position: relative;
+    overflow: auto;
 }
 
 

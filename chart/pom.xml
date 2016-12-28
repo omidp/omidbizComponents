@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>omidbizComponents</artifactId>
+    <groupId>org.omidbiz</groupId>
+    <version>2.2</version>
+  </parent>
+  <groupId>org.omidbiz</groupId>
+  <artifactId>chart</artifactId>
+  <version>2.2</version>
+  <name>chart</name>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.richfaces.cdk</groupId>
+        <artifactId>maven-cdk-plugin</artifactId>
+        <version>3.3.1.GA</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <library>
+            <prefix>org.omidbiz</prefix>
+            <taglib>
+              <shortName>chart</shortName>
+            </taglib>
+          </library>
+        </configuration>
+      </plugin>
+<plugin>
+
+    <artifactId>maven-compiler-plugin</artifactId>
+
+    <inherited>true</inherited>
+
+    <configuration>
+
+        <source>1.5</source>
+
+        <target>1.5</target>
+
+    </configuration>
+</plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.framework</groupId>
+      <artifactId>richfaces-impl</artifactId>
+      <version>3.3.1.GA</version>
+    </dependency>
+  </dependencies>
+</project>

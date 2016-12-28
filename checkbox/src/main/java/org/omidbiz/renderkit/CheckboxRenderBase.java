@@ -20,8 +20,10 @@ import java.util.Map;
 import javax.faces.component.UIComponent;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.faces.convert.ConverterException;
 
 import org.ajax4jsf.renderkit.HeaderResourcesRendererBase;
+import org.ajax4jsf.util.InputUtils;
 import org.omidbiz.component.UICheckbox;
 
 /**
@@ -33,22 +35,34 @@ import org.omidbiz.component.UICheckbox;
 public class CheckboxRenderBase extends HeaderResourcesRendererBase
 {
 
-	@Override
-	public void decode(FacesContext context, UIComponent component)
-	{
-		super.decode(context, component);
-		ExternalContext external = context.getExternalContext();
-		Map requestParams = external.getRequestParameterMap();
-		UICheckbox checkBox = (UICheckbox) component;
-		String clientId = checkBox.getClientId(context);
-		String submittedValue = (String) requestParams.get(clientId + "-chk");
-		checkBox.setSubmittedValue(submittedValue);
-	}
+    @Override
+    public void decode(FacesContext context, UIComponent component)
+    {
+        super.decode(context, component);
+        ExternalContext external = context.getExternalContext();
+        Map requestParams = external.getRequestParameterMap();
+        UICheckbox checkBox = (UICheckbox) component;
+        String clientId = checkBox.getClientId(context);
+        String submittedValue = (String) requestParams.get(clientId + "-chk");        
+        checkBox.setSubmittedValue(submittedValue);
+    }
+    
+    @Override
+    public Object getConvertedValue(FacesContext context, UIComponent component, Object submittedValue) throws ConverterException
+    {
+        return InputUtils.getConvertedStringValue(context, component, submittedValue);
+    }
 
-	@Override
-	protected Class getComponentClass()
-	{
-		return UICheckbox.class;
-	}
+    @Override
+    public boolean getRendersChildren()
+    {
+        return true;
+    }
+
+    @Override
+    protected Class getComponentClass()
+    {
+        return UICheckbox.class;
+    }
 
 }
