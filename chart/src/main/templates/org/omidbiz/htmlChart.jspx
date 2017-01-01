@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:root 
+	xmlns:f="http://ajax4jsf.org/cdk/template" 
+	xmlns:c=" http://java.sun.com/jsf/core" 
+	xmlns:ui=" http://ajax4jsf.org/cdk/ui"
+	xmlns:u=" http://ajax4jsf.org/cdk/u"
+	xmlns:jsp=" http://ajax4jsf.org/cdk/jsp"
+	xmlns:x=" http://ajax4jsf.org/cdk/x"
+	class="org.omidbiz.renderkit.html.ChartRenderer"
+	baseclass="org.omidbiz.renderkit.ChartRenderBase"
+	component="org.omidbiz.component.UIChart" 
+	>
+	<f:clientid var="clientId"/>
+	<h:styles>
+		css/chart.css
+	</h:styles>
+	<c:set var="width" value="#{component.attributes['width']}"/>
+	<c:set var="height" value="#{component.attributes['height']}"/>
+	<c:set var="style" value="#{component.attributes['styleFrame']}"/>
+	
+		<div id="#{this:getFinalId(context, component)}" style="width:#{width}px; height:#{height}px; #{style}"></div>
+	
+	<f:call name="initializeMask">
+	
+		<vcp:body></vcp:body>
+	
+	</f:call>
+	
+</f:root>

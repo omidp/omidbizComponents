@@ -129,6 +129,7 @@
     <module>progressbar</module>
     <module>inputMultiSelectList</module>
     <module>inputTaggy</module>
+    <module>chart</module>
     
   </modules>
   <build>
